@@ -46,9 +46,9 @@ $.ajax("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
 ### Schedule of Work
 | Day | Goals | What I Accomplished
 |-----|-------|---------------------|
-|  Sat.  | Identify API, roughly plan project, create ReadMe, get approval from Kyle, review this week's class notes (etc.), more detailed plan of project, get things console logging the way I want | TBD |
-|  Sun.  | Fetch data and render it on DOM, build form for user input, tie the two together ( + other homework)| TBD |
-|  Mon.  |  Address mobile responsiveness, make pretty with CSS (+ finish other homework) | TBD |
+|  Sat.  | Identify API, roughly plan project, create ReadMe, get approval from Kyle, review this week's class notes (etc.), more detailed plan of project, get things console logging the way I want | Accomplished everything on my list. ALSO: got data to fetch and render on the DOM, built a form for user input, and tied the two together - YO. I deserve a cocktail now. |
+|  Sun.  |  Lesson 10 homework, which will inform CSS choices; finalize functionality of initial product, initial design using CSS | TBD |
+|  Mon.  |  Address mobile responsiveness, make pretty with CSS | TBD |
 |  Tue.  |  Make it prettier with CSS, add random functionality. | TBD |
 |  Wed.  |  If random func is complete, add search by ingredient functionality | TBD |
 |  Thu.  |  Clean up (hopefully) | TBD |
