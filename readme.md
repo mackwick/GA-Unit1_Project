@@ -1,54 +1,57 @@
-# Project 1
-#### by Mackenzie Wicker
-:20
-DEPLYOYED SITE: [Click Here](https://sealproject1.vercel.app/)
+# Project 1: What are we drinking tonight?
+
+by Mackenzie Wicker
+
+Deployed on Vercel: [https://ga-unit1-project.vercel.app/](https://ga-unit1-project.vercel.app/)
 
 ### Project Description
 
-paragraph discussing idea of project, api using, and desired user experience
-EXAMPLE:
-> I am creating a perfume maker. We generate a list of perfume ingredients using the items from the perfume ingredient API. Users will select ingredients and generate an imaginary perfume.
+I'm creating an application to help people track down cocktail recipes. Users will enter the name of a cocktail and recieve a list of needed ingredients, a photo of the drink, and simple instructions.
+
+Stretch goals: Also allow searches by ingredient and a "You Decide" button that produces a random cocktail.
+
+### Technologies Used (anticipated)
+- HTML
+- CSS
+- JavaScript
+- jQuery
+- The Cocktail DB API
 
 ### API Description
-- What is your API? How will you use it? DOes it require any auth like an apikey? List some the urls you're using.
-- `https://perfumeapi.com/ingredients`: this returns a json array with ingrets
-- Example code of you testing it
+API: [TheCocktailDB](https://www.thecocktaildb.com/api.php)
+- Requires an apikey for basic access, which is free for educational uses.
+- Tested code:
 ```js
 
-sample code here
-
+$.ajax("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+.then((data) => {
+    console.log(data.drinks[0])
+})
 ```
-
-/Sample Fetch/AJAX called:
+- Test result:
 ```js
-const url = "https://www.perfumeapi.com/ingredients"
-fetch(url)
-.then((res) => res.json())
-.then((data) => console.log(data))
+{idDrink: '11007', strDrink: 'Margarita', strDrinkAlternate: null, strTags: 'IBA,ContemporaryClassic', strVideo: null, …}
 ```
-
-The Data I get back:
-```json
-[
-  {
-    "ingredient": "Bergamot",
-    "description": "A citrus fruit with a bright, uplifting scent."
-  },]
 
 ### Mockup
-Very simple layout of where things are gonna go. - Desktop and mobile
+#### Desktop Mockup:
+![Desktop Mockup Image](https://i.imgur.com/MmYrLKX.jpg)
 
-// upload image to imgur
-// get link (w/ .png or .jpg, etc)
-// add image: ![Mockup Image](URL HERE)
-// same syntax for links but w/o the !
+#### Mobile Mockup:
+![Mobile Mockup Image](https://i.imgur.com/5HSvbYz.png)
 
 ### Roadblocks
-- Keep track of difficulties
+- TBD
 
 ### Schedule of Work
 | Day | Goals | What I Accomplished
 |-----|-------|---------------------|
-|  Sat.  | Identify API, roughly plan project, create ReadMe, get approval from Kyle, review this week's class notes (etc.), more detailed plan of project |
-|  Sun.  | 
+|  Sat.  | Identify API, roughly plan project, create ReadMe, get approval from Kyle, review this week's class notes (etc.), more detailed plan of project, get things console logging the way I want | TBD |
+|  Sun.  | Fetch data and render it on DOM, build form for user input, tie the two together ( + other homework)| TBD |
+|  Mon.  |  Address mobile responsiveness, make pretty with CSS (+ finish other homework) | TBD |
+|  Tue.  |  Make it prettier with CSS, add random functionality. | TBD |
+|  Wed.  |  If random func is complete, add search by ingredient functionality | TBD |
+|  Thu.  |  Clean up (hopefully) | TBD |
+|  Fri.  |  Extra prettiness and anything leftover | TBD |
+|  Sat.  |  Present Project | TBD |
 
