@@ -16,7 +16,6 @@ function getCocktail(cocktail) {
     fetch(url)
     .then((result) => {return result.json()})
     .then((data) => {
-        console.log(data)
         renderCocktails(data.drinks[0])
     })
 }
@@ -35,59 +34,15 @@ function renderCocktails(cocktail) {
         <p>${cocktail.strInstructions}</p>
     `)
     //add strIngredient1-10 as lis to the ul#ingredients IF their value !== null
-    const $ul = $("#ingredients")
-
-/**************LOOK FOR CLEANER OPTION FOR THIS ****************************/
-    if (`${cocktail.strIngredient1}` !== "null") {
-        const $li = $("<li>")
-        $li.text(`${cocktail.strIngredient1}`)
-        $ul.append($li)
-    }
-    if (`${cocktail.strIngredient2}` !== "null") {
-        const $li = $("<li>")
-        $li.text(`${cocktail.strIngredient2}`)
-        $ul.append($li)
-    }
-    if (`${cocktail.strIngredient3}` !== "null") {
-        const $li = $("<li>")
-        $li.text(`${cocktail.strIngredient3}`)
-        $ul.append($li)
-    }
-    if (`${cocktail.strIngredient4}` !== "null") {
-        const $li = $("<li>")
-        $li.text(`${cocktail.strIngredient4}`)
-        $ul.append($li)
-    }
-    if (`${cocktail.strIngredient5}` !== "null") {
-        const $li = $("<li>")
-        $li.text(`${cocktail.strIngredient5}`)
-        $ul.append($li)
-    }
-    if (`${cocktail.strIngredient6}` !== "null") {
-        const $li = $("<li>")
-        $li.text(`${cocktail.strIngredient6}`)
-        $ul.append($li)
-    }
-    if (`${cocktail.strIngredient7}` !== "null") {
-        const $li = $("<li>")
-        $li.text(`${cocktail.strIngredient7}`)
-        $ul.append($li)
-    }
-    if (`${cocktail.strIngredient8}` !== "null") {
-        const $li = $("<li>")
-        $li.text(`${cocktail.strIngredient8}`)
-        $ul.append($li)
-    }
-    if (`${cocktail.strIngredient9}` !== "null") {
-        const $li = $("<li>")
-        $li.text(`${cocktail.strIngredient9}`)
-        $ul.append($li)
-    }
-    if (`${cocktail.strIngredient10}` !== "null") {
-        const $li = $("<li>")
-        $li.text(`${cocktail.strIngredient10}`)
-        $ul.append($li)
-    }
+    const $ul = $("#ingredients")    
+    Object.entries(cocktail).forEach(([key, value]) => {
+        for (let i=1; i<11; i++) {
+        if (key === "strIngredient" + i && `${value}` !== "null") {
+            const $li = $("<li>")
+            $li.text(`${value}`)
+            $ul.append($li)
+        }}
+    })
 }
 
 
@@ -105,3 +60,5 @@ function handleSubmit(event) {
 //add event listener
 const $form = $("form")
 $form.on("submit", handleSubmit)
+
+getCocktail("bloody%20mary")
