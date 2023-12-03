@@ -14,9 +14,12 @@ function getCocktail(cocktail) {
     const url = `${baseURL}${cocktail}`
     //fetch from the url
     fetch(url)
-    .then((result) => {return result.json()})
-    .then((data) => {
-        renderCocktails(data.drinks[0])
+    .then((res) => {return res.json()})
+    .then((data) => { 
+        if (data.drinks === null) { 
+        $("#cocktail").text("Sorry, we don't know that one. Why don't you try something else. Or maybe just take a shot?")
+        } else {console.log(data)
+        {renderCocktails(data.drinks[0])}}
     })
 }
 
@@ -33,10 +36,10 @@ function renderCocktails(cocktail) {
         <h3>Instructions</h3>
         <p>${cocktail.strInstructions}</p>
     `)
-    //add strIngredient1-10 as lis to the ul#ingredients IF their value !== null
+    //add strIngredient1-20 as lis to the ul#ingredients IF their value !== null
     const $ul = $("#ingredients")    
     Object.entries(cocktail).forEach(([key, value]) => {
-        for (let i=1; i<11; i++) {
+        for (let i=1; i<20; i++) {
         if (key === "strIngredient" + i && `${value}` !== "null") {
             const $li = $("<li>")
             $li.text(`${value}`)
@@ -51,7 +54,7 @@ function handleSubmit(event) {
     event.preventDefault()
     const formData = new FormData(event.target)
     getCocktail(formData.get("cocktailName"))
-
+    event.target.reset()
 }
 
 //*********************** */
