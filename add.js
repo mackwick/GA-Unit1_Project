@@ -28,13 +28,13 @@ function renderCocktails(cocktail) {
     //grab the div I want to put the info in
     const $cocktail = $("#cocktail")
     //change html in the div
-    $cocktail.html(`
+    $cocktail.html(`<div id="innerdiv">
         <h2>${cocktail.strDrink}</h2>
         <img src=${cocktail.strDrinkThumb}>
         <h3>Ingredients</h3>
         <ul id="ingredients"></ul>
         <h3>Instructions</h3>
-        <p>${cocktail.strInstructions}</p>
+        <p>${cocktail.strInstructions}</p></div>
     `)
     //add strIngredient1-20 as lis to the ul#ingredients IF their value !== null
     const $ul = $("#ingredients")    
@@ -64,4 +64,4 @@ function handleSubmit(event) {
 const $form = $("form")
 $form.on("submit", handleSubmit)
 
-getCocktail("bloody%20mary")
+getCocktail("ramos gin fizz")

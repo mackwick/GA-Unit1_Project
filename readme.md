@@ -49,7 +49,7 @@ $.ajax("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
 |  Sat.  | Identify API, roughly plan project, create ReadMe, get approval from Kyle, review this week's class notes (etc.), more detailed plan of project, get things console logging the way I want | Accomplished everything on my list. ALSO: got data to fetch and render on the DOM, built a form for user input, and tied the two together - YO. I deserve a cocktail now. |
 |  Sun.  |  Address non-DRY section of code (with loop, I think), clear field after search, add alert if the cocktail isn't in the API, do Lesson 10 homework, which will inform CSS choices; finalize functionality of initial product, initial design using CSS | Addressed non-DRY section, cleared fiedld after search, added response to cocktail not being in the system. |
 |  Mon.  |  Learn Flex Box and Grid, complete Lesson 10 homework. | Sorta did that |
-|  Tue.  |  Finish Lesson 10 HW, review additional materials on flexbox and grid, start CSS on this. | TBD |
+|  Tue.  |  Finish Lesson 10 HW, review additional materials on flexbox and grid, establish basic CSS, gather images, start on responsiveness | TBD |
 |  Wed.  |  TBD | TBD |
 |  Thu.  |  Clean up (hopefully) | TBD |
 |  Fri.  |  Extra prettiness and anything leftover | TBD |
