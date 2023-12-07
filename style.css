@@ -57,6 +57,18 @@ button {
     color: white;
 }
 
+#bonus {
+    display: flex;
+    justify-content: right;
+    margin: 30px 50px;
+}
+
+#random {
+  background-color: rgb(192, 108, 0);
+  width: 60%;
+  font-size: 18px;
+}
+
 /******************DESIGN: LEFT SIDE*******************/
 
 #cocktail {

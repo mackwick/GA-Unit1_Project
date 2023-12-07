@@ -2,29 +2,13 @@
 // GLOBAL VARIABLES
 //************************ */
 
-const baseURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
-const randomBaseURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+const randomBaseURL = "www.thecocktaildb.com/api/json/v1/1/random.php"
 
 //************************ */
 // Functions
 //************************ */
 
-// Function to fetch the data for search
-function getCocktail(cocktail) {
-    //construct URL
-    const url = `${baseURL}${cocktail}`
-    //fetch from the url
-    fetch(url)
-    .then((res) => {return res.json()})
-    .then((data) => { 
-        if (data.drinks === null) { 
-        $("#cocktail").text("Sorry, we don't know that one. Why don't you try something else. Or maybe just take a shot?")
-        } else {console.log(data)
-        {renderCocktails(data.drinks[0])}}
-    })
-}
-
-//Function to fetch the data for random pick
+// Function to fetch the data
 function getRandom() {
     //construct URL
     const url = `${randomBaseURL}`
@@ -35,7 +19,7 @@ function getRandom() {
 }
 
 
-// function that renders the name, image, ingredients, and recipe of the first result to the screen
+    // function that renders the name, image, ingredients, and recipe of the first result to the screen
 function renderCocktails(cocktail) {
     //grab the div I want to put the info in
     const $cocktail = $("#cocktail")
@@ -61,28 +45,13 @@ function renderCocktails(cocktail) {
 }
 
 
-//function for submitting cocktail names
-function handleSubmit(event) {
-    event.preventDefault()
-    const formData = new FormData(event.target)
-    getCocktail(formData.get("cocktailName"))
-    event.target.reset()
-}
-
-
-
 
 
 //*********************** */
 // Main Code
 //************************ */
-//add event listener
-const $form = $("form")
-$form.on("submit", handleSubmit)
-
-
 //add random event listener
 const $random = $("#random")
 $random.on("click", getRandom)
 
-// getCocktail("ramos gin fizz")
+
