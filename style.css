@@ -9,6 +9,7 @@ body {
     background-image: url("./images/pexels-pixabay-301692.jpg");
     background-size: 100%;
     background-position-x: right;
+    background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -55,8 +56,6 @@ button {
     background-color: rgb(172, 49, 49);
     color: white;
 }
-
-
 
 /******************DESIGN: LEFT SIDE*******************/
 
@@ -117,8 +116,6 @@ p {
 
 
     form {
-        display: flex;
-        justify-content: space-between;
         align-items: start;
         margin: 0 50px 0 60px;
     }
@@ -129,6 +126,138 @@ p {
 
 }
 
-/*********************TABLET**********************/
 
 /********************MOBILE PHONE*****************/
+
+@media screen and (max-width: 700px) {
+
+    body {
+        background-size: 350%;
+    }
+    
+    #largeContainer {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+ /**MOBILE Search Section**/
+
+    #rightContainer {
+        width: 100%;
+        border-left: none;
+    }
+    
+    h1 {
+        margin: 20px 10px 30px 20px;
+        font-size: 35px;
+        font-weight: 400;
+    }
+    
+    form {
+        margin: 0 8px;
+        font-size: 16px;
+    }
+    
+    input {  
+        margin-left: 10px;
+        padding: 0 0 0 2px;
+        width: 60%;
+    }
+
+    button {
+        padding: 6px;
+    }
+
+/**MOBILE Cocktail Section**/
+
+    #cocktail {
+        width: 100%;
+        padding: 45px 0;
+    }
+
+    #innerdiv {
+        border: none;
+        border-top: 1px solid white;
+    }
+
+    h2, h3 {
+        margin: 20px 20px;
+    }
+
+    }
+
+
+
+    /********************Teensy Mobile*******************/
+
+    @media screen and (max-width: 300px) {
+           form {
+        font-size: 12px;
+    } 
+    }
+
+/********************Tablet*******************/
+
+    @media screen and (max-width: 800px) and (min-width: 701px) {
+
+        body {
+            background-size: 200%;
+        }
+        
+        #largeContainer {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+     /**TABLET Search Section**/
+    
+        #rightContainer {
+            width: 100%;
+            border-left: none;
+        }
+        
+        h1 {
+            margin: 20px 10px 30px 40px;
+            font-size: 70px;
+            font-weight: 400;
+        }
+        
+        form {
+            margin: 0 15px;
+            font-size: 20px;
+            justify-content: space-around;
+        }
+        
+        input {  
+            margin-left: 0;
+            padding: 0 0 0 2px;
+            width: 60%;
+        }
+    
+        button {
+            padding: 15px;
+        }
+    
+    /**TABLET Cocktail Section**/
+    
+        #cocktail {
+            width: 100%;
+            padding: 45px 0;
+        }
+    
+        #innerdiv {
+            border: none;
+            border-top: 1px solid white;
+        }
+    
+        h2, h3 {
+            margin: 20px 50px;
+            font-size: 30px;
+        }
+
+        p {
+            margin: 20px 50px;
+        }
+    
+        }
+    

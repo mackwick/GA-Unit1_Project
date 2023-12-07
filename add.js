@@ -64,4 +64,4 @@ function handleSubmit(event) {
 const $form = $("form")
 $form.on("submit", handleSubmit)
 
-getCocktail("ramos gin fizz")
+// getCocktail("ramos gin fizz")
