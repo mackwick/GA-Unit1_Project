@@ -1,7 +1,6 @@
 /*****************DESIGN: OVERALL*****************/
 * {
     box-sizing: border-box;
-    border: 1px solid white;
 }
 
 body {
@@ -28,16 +27,7 @@ body {
     width: 50%;
     display: flex;
     flex-direction: column;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
-    /* flex-direction: column; */
-    
 }
-
-/* header {
-    grid-column: 1/8;
-    grid-row: 1/7;
-} */
 
 h1 {
     margin: 200px 0 30px 30px;
@@ -49,38 +39,44 @@ h1 {
 }
 
 form {
-    /* grid-column: 1/8;
-    grid-row: 5/6; */
     display: flex;
     justify-content: space-between;
+    align-items: start;
+    margin: 0 50px 0 30px;
 }
 
 input {
-    margin-left: 30px;
+    margin-left: 10px;
     padding: 10px;
     width: 500px;
 }
 
 button {
     border: none;
-    padding: 10px 25px 15px 25px;
+    font-size: 12px;
+    padding: 10px 12px 10px 15px;
     background-color: rgb(172, 49, 49);
     color: white;
 }
 
-#bonus {
-    /* grid-column: 1/8;
-    grid-row: 6/7; */
-    display: flex;
-    justify-content: right;
-    margin: 30px 0;
+button:active {
+    background: #d29494;
 }
 
-#random {
-    
+#bonus {
+    display: flex;
+    justify-content: right;
+    margin: 30px 30px 30px 0;
+}
+
+#random {  
     background-color: rgb(192, 108, 0);
     width: 60%;
     font-size: 18px;
+}
+
+#random:active {
+    background: rgb(227, 165, 84);
 }
 
 /******************DESIGN: LEFT SIDE*******************/
@@ -154,6 +150,10 @@ p {
         margin: 0 50px 0 60px;
     }
 
+    #nameSearch {
+        font-size: 16px;
+    }
+
     #cocktail {
         padding: 50px 75px;
     }
@@ -188,17 +188,29 @@ p {
     
     form {
         margin: 0 8px;
-        font-size: 16px;
+        justify-content: space-around;
     }
     
     input {  
+        font-size: 12px;
         margin-left: 10px;
-        padding: 0 0 0 2px;
         width: 60%;
     }
 
-    button {
-        padding: 6px;
+    #nameSearch {
+        font-size: 12px;
+        padding: 10px 12px 15px 5px;
+    }
+
+    #bonus {
+        margin: 30px 0;
+        flex-direction: row !important;
+        justify-content: center;
+    }
+    
+    #random {
+        width: 80%;
+        font-size: 18px;
     }
 
 /**MOBILE Cocktail Section**/
@@ -288,12 +300,23 @@ p {
         
         input {  
             margin-left: 0;
-            padding: 0 0 0 2px;
             width: 60%;
         }
     
         button {
             padding: 15px;
+        }
+
+        #bonus {
+            display: flex;
+            justify-content: right;
+            margin: 30px 30px 30px 0;
+        }
+        
+        #random {  
+            background-color: rgb(192, 108, 0);
+            width: 60%;
+            font-size: 18px;
         }
     
     /**TABLET Cocktail Section**/
