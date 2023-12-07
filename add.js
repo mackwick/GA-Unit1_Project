@@ -75,7 +75,6 @@ function handleSubmit(event) {
 //add event listener
 const $form = $("form")
 $form.on("submit", handleSubmit)
-$form.on("keyup", function(event) { if (event.target === 13) {handleSubmit}})
 
 
 //add random event listener
