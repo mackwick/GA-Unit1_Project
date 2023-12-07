@@ -196,9 +196,18 @@ p {
     } 
     }
 
+    /********************Big honkin tablet*******************/
+
+    @media screen and (max-width: 1250px) and (min-width: 1031px) {
+
+        body {
+            background-size: 150%;
+        }
+    }
+
 /********************Tablet*******************/
 
-    @media screen and (max-width: 800px) and (min-width: 701px) {
+    @media screen and (max-width: 1030px) and (min-width: 701px) {
 
         body {
             background-size: 200%;
@@ -218,7 +227,7 @@ p {
         
         h1 {
             margin: 20px 10px 30px 40px;
-            font-size: 70px;
+            font-size: 65px;
             font-weight: 400;
         }
         
