@@ -81,4 +81,4 @@ $form.on("submit", handleSubmit)
 const $random = $("#random")
 $random.on("click", getRandom)
 
-getCocktail("home on the range")
+getCocktail("ramos gin fizz")

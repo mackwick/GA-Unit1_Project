@@ -50,8 +50,8 @@ $.ajax("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
 |  Sun.  |  Address non-DRY section of code (with loop, I think), clear field after search, add alert if the cocktail isn't in the API, do Lesson 10 homework, which will inform CSS choices; finalize functionality of initial product, initial design using CSS | Addressed non-DRY section, cleared fiedld after search, added response to cocktail not being in the system. |
 |  Mon.  |  Learn Flex Box and Grid, complete Lesson 10 homework. | Sorta did that |
 |  Tue.  |  Finish Lesson 10 HW, review additional materials on flexbox and grid, establish basic CSS, gather images, start on responsiveness | All as planned |
-|  Wed.  |  Minor CSS tweaks, review MVP requirements, focus on responsiveness, if I finish - add randomized button | TBD |
-|  Thu.  |  Clean up (hopefully) | TBD |
+|  Wed.  |  Minor CSS tweaks, review MVP requirements, focus on responsiveness, if I finish - add randomized button | All as planned, including randomized button, but need to address responsiveness for that. |
+|  Thu.  |  Make randomized function responsive, clean up. | TBD |
 |  Fri.  |  Extra prettiness and anything leftover | TBD |
 |  Sat.  |  Present Project | TBD |
 
