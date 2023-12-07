@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     background-image: url("./images/pexels-pixabay-301692.jpg");
-    background-size: 100%;
+    background-size: 110%;
     background-position-x: right;
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
