@@ -18,7 +18,7 @@ function getCocktail(cocktail) {
     .then((res) => {return res.json()})
     .then((data) => { 
         if (data.drinks === null) { 
-        $("#cocktail").text("Sorry, we don't know that one. Why don't you try something else. Or maybe just take a shot?")
+        $("#cocktail").html("<div id='noResult'>Sorry, we don't know that one. Why don't you try something else. Or maybe just take a shot?</div>")
         } else {console.log(data)
         {renderCocktails(data.drinks[0])}}
     })
@@ -60,7 +60,6 @@ function renderCocktails(cocktail) {
     })
 }
 
-
 //function for submitting cocktail names
 function handleSubmit(event) {
     event.preventDefault()
@@ -68,9 +67,6 @@ function handleSubmit(event) {
     getCocktail(formData.get("cocktailName"))
     event.target.reset()
 }
-
-
-
 
 
 //*********************** */
@@ -85,4 +81,4 @@ $form.on("submit", handleSubmit)
 const $random = $("#random")
 $random.on("click", getRandom)
 
-// getCocktail("ramos gin fizz")
+getCocktail("home on the range")
