@@ -19,7 +19,7 @@ function getCocktail(cocktail) {
     .then((res) => {return res.json()})
     .then((data) => { 
         if (data.drinks === null) { 
-        $("#cocktail").html("<div id='noResult'>Sorry, we don't know that one. Why don't you try something else. Or maybe just take a shot?</div>")
+        $("#cocktail").html("<div id='noResult'>Sorry, we don't know that one. Why don't you try something else? Or maybe just take a shot?</div>")
         } else {console.log(data)
         {renderCocktails(data.drinks[0])}}
     })}
@@ -81,4 +81,3 @@ $form.on("submit", handleSubmit)
 const $random = $("#random")
 $random.on("click", getRandom)
 
-// getCocktail("ramos gin fizz")

@@ -1,4 +1,7 @@
-/*****************DESIGN: OVERALL*****************/
+/**************************************************************/
+/* GENERAL DESIGN */
+/**************************************************************/
+
 * {
     box-sizing: border-box;
 }
@@ -19,7 +22,9 @@ body {
     justify-content: space-between;
 }
 
-/*****************DESIGN: RIGHT SIDE****************/
+/**************************************************************/
+/* RIGHT SIDE (INPUT AND SEARCH) */
+/**************************************************************/
 
 #rightContainer {
     border-left: 1px solid whitesmoke;
@@ -80,7 +85,9 @@ button:active {
     background: rgb(227, 165, 84);
 }
 
-/******************DESIGN: LEFT SIDE*******************/
+/**************************************************************/
+/* LEFT SIDE (RESULTS FROM API) */
+/**************************************************************/
 
 #cocktail {
     width: 50%;
@@ -132,36 +139,11 @@ p {
     text-shadow: 2px 2px 20px black;
 }
 
-/******************RESPONSIVENESS*******************/
+/**************************************************************/
+/* RESPONSIVENES */
+/**************************************************************/
 
-/******************LARGE SCREEN********************/
-
-@media screen and (min-width: 1550px) {
-    body {
-        background-size: cover;
-    }
-
-    h1 {
-        font-size: 390%;
-        margin: 200px 0 30px 80px;
-    }
-
-    form {
-        align-items: start;
-        margin: 0 50px 0 60px;
-    }
-
-    #nameSearch {
-        font-size: 16px;
-    }
-
-    #cocktail {
-        padding: 50px 75px;
-    }
-
-}
-
-/********************MOBILE PHONE*****************/
+/** MOBILE PHONE **/
 
 @media screen and (max-width: 700px) {
 
@@ -174,7 +156,7 @@ p {
         justify-content: space-between;
     }
     
- /**MOBILE Search Section**/
+ /* MOBILE - Right Side */
 
     #rightContainer {
         width: 100%;
@@ -214,7 +196,7 @@ p {
         font-size: 18px;
     }
 
-/**MOBILE Cocktail Section**/
+/* MOBILE - Left Side */
 
     #cocktail, #noResult {
         width: 100%;
@@ -243,8 +225,7 @@ p {
     }
 
 
-
-    /********************Teensy Mobile*******************/
+/** SMALLER MOBILE PHONE **/
 
     @media screen and (max-width: 300px) {
            form {
@@ -258,16 +239,7 @@ p {
 
     }
 
-    /********************Big honkin tablet*******************/
-
-    @media screen and (max-width: 1250px) and (min-width: 1031px) {
-
-        body {
-            background-size: 150%;
-        }
-    }
-
-/********************Tablet*******************/
+/** TABLET **/
 
     @media screen and (max-width: 1030px) and (min-width: 701px) {
 
@@ -280,7 +252,7 @@ p {
             justify-content: space-between;
         }
         
-     /**TABLET Search Section**/
+/* TABLET - Right Side */
     
         #rightContainer {
             width: 100%;
@@ -320,7 +292,7 @@ p {
             font-size: 18px;
         }
     
-    /**TABLET Cocktail Section**/
+/* TABLET - Left Side */
     
         #cocktail, #noResult {
             width: 100%;
@@ -348,4 +320,42 @@ p {
         }
 
         }
+
+/** LARGER TABLET **/
+
+    @media screen and (max-width: 1250px) and (min-width: 1031px) {
+
+        body {
+            background-size: 150%;
+        }
+    }
+
+
     
+
+/** LARGER DESKTOP **/
+
+@media screen and (min-width: 1550px) {
+    body {
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 390%;
+        margin: 200px 0 30px 80px;
+    }
+
+    form {
+        align-items: start;
+        margin: 0 50px 0 60px;
+    }
+
+    #nameSearch {
+        font-size: 16px;
+    }
+
+    #cocktail {
+        padding: 50px 75px;
+    }
+
+}
