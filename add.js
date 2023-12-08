@@ -12,6 +12,7 @@ const randomBaseURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
 // Function to fetch the data for search
 function getCocktail(cocktail) {
     //construct URL
+    if (cocktail != "") {
     const url = `${baseURL}${cocktail}`
     //fetch from the url
     fetch(url)
@@ -21,7 +22,7 @@ function getCocktail(cocktail) {
         $("#cocktail").html("<div id='noResult'>Sorry, we don't know that one. Why don't you try something else. Or maybe just take a shot?</div>")
         } else {console.log(data)
         {renderCocktails(data.drinks[0])}}
-    })
+    })}
 }
 
 //Function to fetch the data for random pick
@@ -75,7 +76,6 @@ function handleSubmit(event) {
 //add event listener
 const $form = $("form")
 $form.on("submit", handleSubmit)
-
 
 //add random event listener
 const $random = $("#random")
