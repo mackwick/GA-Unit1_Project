@@ -2,24 +2,31 @@
 /* GENERAL DESIGN */
 /**************************************************************/
 
-* {
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  min-width: 0;
+  overflow-wrap: normal;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    background-image: url("./images/pexels-pixabay-301692.jpg");
-    background-size: 110%;
-    background-position-x: right;
-    background-attachment: fixed;
-    font-family: 'Poppins', sans-serif;
+  height: 100dvh;
+  background-image: url("./images/pexels-pixabay-301692.jpg");
+  background-size: 110%;
+  background-position-x: right;
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
 }
 
 #largeContainer {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+  margin: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  height: 100%;
 }
 
 /**************************************************************/
@@ -27,62 +34,67 @@ body {
 /**************************************************************/
 
 #rightContainer {
-    border-left: 1px solid whitesmoke;
-    margin: 0 2% 0 0;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+  border-left: 1px solid whitesmoke;
+  padding-bottom: 200px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
 }
 
 h1 {
-    margin: 200px 0 30px 30px;
-    color: whitesmoke;
-    font-size: 60px;
-    font-style: italic;
-    font-weight: 700;
-    text-shadow: 2px 2px 20px black;
+  color: whitesmoke;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700;
+  text-shadow: 2px 2px 20px black;
 }
 
 form {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    margin: 0 50px 0 30px;
+  display: flex;
+  justify-content: right;
 }
 
 input {
-    margin-left: 10px;
-    padding: 10px;
-    width: 500px;
+  height: 42px;
+  text-align: center;
+  width: 75%;
+  border-radius: 5px;
+  margin-right: 20px;
+  width: 500px;
 }
 
 button {
-    border: none;
-    border-radius: 5px;
-    font-size: 12px;
-    padding: 10px 12px 10px 15px;
-    background-color: rgb(172, 49, 49);
-    color: white;
+  height: 42px;
+  width: 25%;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: rgb(172, 49, 49);
+  color: white;
 }
 
-button:active {
-    background: #d29494;
+button:hover {
+  background: #d29494;
 }
 
-#bonus {
-    display: flex;
-    justify-content: right;
-    margin: 30px 30px 30px 0;
+form,
+button,
+#random {
+  font-size: 18px;
+  align-items: center;
 }
 
-#random {  
-    background-color: rgb(192, 108, 0);
-    width: 60%;
-    font-size: 18px;
+#random {
+  margin-top: 30px;
+  background-color: rgb(192, 108, 0);
+  width: 60%;
+  font-size: 18px;
 }
 
-#random:active {
-    background: rgb(227, 165, 84);
+#random:hover {
+  background: rgb(227, 165, 84);
 }
 
 /**************************************************************/
@@ -90,272 +102,206 @@ button:active {
 /**************************************************************/
 
 #cocktail {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    padding: 75px 75px;
-    color: whitesmoke;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 75px 75px;
+  color: whitesmoke;
 }
 
 #innerdiv {
-       border: 1px solid white;
+  border: 1px solid white;
 }
 
-h2, h3 {
-    margin: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: rgba(118, 113, 109, 0.75);
+h2,
+h3 {
+  margin: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(118, 113, 109, 0.75);
 }
 
 #cocktail img {
-    width: 50%;
-    border: 2px solid whitesmoke;
-    display: block;
-    margin: auto;
-    }
+  width: 50%;
+  border: 2px solid whitesmoke;
+  display: block;
+  margin: auto;
+}
 
 #ingredients {
-    margin: 0 10%;
-    list-style: circle;
+  margin: 0 10%;
+  list-style: circle;
 }
 
 p {
-    background-color: rgba(118, 113, 109, 0.75);
-    text-align: left;
-    padding: 2%;
-    margin: 10px 20px;
+  background-color: rgba(118, 113, 109, 0.75);
+  text-align: left;
+  padding: 2%;
+  margin: 10px 20px;
 }
 
 #noResult {
-    margin: 200px 0;
-    padding: 10px 20px;
-    background-color: rgba(118, 113, 109, 0.75);
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 700;
-    text-shadow: 2px 2px 20px black;
+  margin: 200px 0;
+  padding: 10px 20px;
+  background-color: rgba(118, 113, 109, 0.75);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  text-shadow: 2px 2px 20px black;
 }
 
 /**************************************************************/
 /* RESPONSIVENES */
 /**************************************************************/
 
-/** MOBILE PHONE **/
+/** LARGER TABLET **/
 
-@media screen and (max-width: 700px) {
-
-    body {
-        background-size: 350%;
-    }
-    
-    #largeContainer {
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
- /* MOBILE - Right Side */
-
-    #rightContainer {
-        width: 100%;
-        border-left: none;
-    }
-    
-    h1 {
-        margin: 20px 10px 30px 20px;
-        font-size: 35px;
-        font-weight: 400;
-    }
-    
-    form {
-        margin: 0 8px;
-        justify-content: space-around;
-    }
-    
-    input {  
-        font-size: 12px;
-        margin-left: 10px;
-        width: 60%;
-    }
-
-    #nameSearch {
-        font-size: 12px;
-        padding: 10px 12px 15px 5px;
-    }
-
-    #bonus {
-        margin: 30px 0;
-        flex-direction: row !important;
-        justify-content: center;
-    }
-    
-    #random {
-        width: 80%;
-        font-size: 18px;
-    }
-
-/* MOBILE - Left Side */
-
-    #cocktail, #noResult {
-        width: 100%;
-        padding: 45px 0;
-    }
-
-    #innerdiv {
-        border: none;
-        border-top: 1px solid white;
-    }
-
-    #bonus {
-        display: flex;
-        flex-direction: column;
-    }
-
-    h2, h3, #noResult {
-        margin: 20px 20px;
-    }
-
-    #noResult {
-        width: 90%;
-        padding: 8px;
-    }
-
-    }
-
-
-/** SMALLER MOBILE PHONE **/
-
-    @media screen and (max-width: 300px) {
-           form {
-        font-size: 12px;
-    } 
-
-    #noResult {
-        width: 87%;
-        padding: 8px;
-    }
-
-    }
+@media screen and (max-width: 1500px) {
+  body {
+    background-size: 150%;
+  }
+}
 
 /** TABLET **/
 
-    @media screen and (max-width: 1030px) and (min-width: 701px) {
+@media screen and (max-width: 1030px) {
+  body {
+    background-size: 200%;
+  }
 
-        body {
-            background-size: 200%;
-        }
-        
-        #largeContainer {
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-/* TABLET - Right Side */
-    
-        #rightContainer {
-            width: 100%;
-            border-left: none;
-        }
-        
-        h1 {
-            margin: 20px 10px 30px 40px;
-            font-size: 65px;
-            font-weight: 400;
-        }
-        
-        form {
-            margin: 0 15px;
-            font-size: 20px;
-            justify-content: space-around;
-        }
-        
-        input {  
-            margin-left: 0;
-            width: 60%;
-        }
-    
-        button {
-            padding: 15px;
-        }
+  #largeContainer {
+    flex-direction: column;
+  }
 
-        #bonus {
-            display: flex;
-            justify-content: right;
-            margin: 30px 30px 30px 0;
-        }
-        
-        #random {  
-            background-color: rgb(192, 108, 0);
-            width: 60%;
-            font-size: 18px;
-        }
-    
-/* TABLET - Left Side */
-    
-        #cocktail, #noResult {
-            width: 100%;
-            padding: 45px 0;
-        }
-    
-        #innerdiv {
-            border: none;
-            border-top: 1px solid white;
-        }
-    
-        h2, h3 {
-            margin: 20px 50px;
-            font-size: 30px;
-        }
+  #rightContainer {
+    width: 100%;
+    border-left: none;
+    padding-bottom: 20px;
+  }
 
-        p {
-            margin: 20px 50px;
-        }
-        
-        #noResult {
-            width: 90%;
-            margin: 20px 50px;
-            font-size: 30px;
-        }
+  h1 {
+    font-size: 56px;
+    font-weight: 400;
+  }
 
-        }
+  form {
+    font-size: 20px;
+  }
 
-/** LARGER TABLET **/
+  input {
+    margin-right: 25px;
+    width: 70%;
+  }
 
-    @media screen and (max-width: 1250px) and (min-width: 1031px) {
+  form,
+  button,
+  #random {
+    font-size: 18px;
+  }
 
-        body {
-            background-size: 150%;
-        }
-    }
+  #random {
+    width: 60%;
+  }
 
+  /* TABLET - Left Side */
 
-    
+  #cocktail,
+  #noResult {
+    width: 100%;
+    padding: 45px 0;
+  }
 
-/** LARGER DESKTOP **/
+  #innerdiv {
+    border: none;
+    border-top: 1px solid white;
+  }
 
-@media screen and (min-width: 1550px) {
-    body {
-        background-size: cover;
-    }
+  h2,
+  h3 {
+    margin: 20px 50px;
+    font-size: 30px;
+  }
 
-    h1 {
-        font-size: 390%;
-        margin: 200px 0 30px 80px;
-    }
+  p {
+    margin: 20px 50px;
+  }
 
-    form {
-        align-items: start;
-        margin: 0 50px 0 60px;
-    }
+  #noResult {
+    width: 90%;
+    margin: 20px 50px;
+    font-size: 30px;
+  }
+}
 
-    #nameSearch {
-        font-size: 16px;
-    }
+/** MOBILE PHONE **/
 
-    #cocktail {
-        padding: 50px 75px;
-    }
+@media screen and (max-width: 700px) {
+  body {
+    background-size: 350%;
+  }
 
+  h1 {
+    font-size: 38px;
+    font-weight: 400;
+  }
+
+  input {
+    margin-left: 10px;
+    width: 60%;
+  }
+
+  #nameSearch {
+    padding: 10px 12px 15px 5px;
+  }
+
+  form,
+  button,
+  #random {
+    font-size: 14px;
+  }
+
+  #random {
+    width: 80%;
+  }
+
+  /* MOBILE - Left Side */
+
+  #cocktail,
+  #noResult {
+    width: 100%;
+    padding: 45px 0;
+  }
+
+  #innerdiv {
+    border: none;
+    border-top: 1px solid white;
+  }
+
+  h2,
+  h3,
+  #noResult {
+    margin: 20px 20px;
+  }
+
+  #noResult {
+    width: 90%;
+    padding: 8px;
+  }
+}
+
+/** SMALLER MOBILE PHONE **/
+
+@media screen and (max-width: 300px) {
+  form,
+  button,
+  #random {
+    font-size: 12px;
+  }
+
+  #noResult {
+    width: 87%;
+    padding: 8px;
+  }
 }
